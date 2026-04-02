@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DRIFIX Privacy Policy</title>
+    <style>
+        :root {
+            --bg: #f4f7fb;
+            --surface: #ffffff;
+            --text: #1f2937;
+            --muted: #5f6b7a;
+            --accent: #0f766e;
+            --border: #d6dce5;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", "Hiragino Sans", "Yu Gothic UI", sans-serif;
+            color: var(--text);
+            background: linear-gradient(180deg, #eef8f6 0%, var(--bg) 100%);
+            line-height: 1.7;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px 64px;
+        }
+
+        article {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 28px 24px;
+            box-shadow: 0 12px 32px rgba(15, 23, 42, 0.06);
+        }
+
+        h1, h2 {
+            line-height: 1.3;
+        }
+
+        h1 {
+            margin: 0 0 12px;
+            font-size: 2rem;
+        }
+
+        h2 {
+            margin-top: 32px;
+            font-size: 1.15rem;
+            color: var(--accent);
+        }
+
+        p, li {
+            color: var(--muted);
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .meta {
+            margin: 0 0 20px;
+            font-size: 0.95rem;
+        }
+
+        .contact {
+            background: #f8fafc;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 16px 18px;
+        }
+
+        a {
+            color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+<main>
+    <article>
+        <h1>プライバシーポリシー</h1>
+        <p class="meta">アプリ名: FishingSeatAdvisor / DRIFIX<br>最終更新日: 2026年4月2日</p>
+
+        <p>
+            FishingSeatAdvisor（以下、「本アプリ」）は、釣り座検討や海況確認を支援するため、
+            位置情報、端末内保存データ、外部 API 通信を利用します。本ポリシーは、本アプリにおける
+            情報の取扱いを説明するものです。
+        </p>
+
+        <h2>1. 取得または利用する情報</h2>
+        <ul>
+            <li>位置情報: 現在地表示、地図表示、地点選択補助のために利用します。</li>
+            <li>ユーザー入力または選択情報: 代表海域、魚種、釣法、日時、地図上で選択した座標などを扱います。</li>
+            <li>端末内保存情報: 最近使った条件、お気に入り条件、表示設定、直前のセッション状態を端末内に保存します。</li>
+            <li>通信情報: 海況、天気、波、潮位、海水温などの取得のため、外部サービスに必要なリクエストを送信します。</li>
+        </ul>
+
+        <h2>2. 利用目的</h2>
+        <ul>
+            <li>地図表示、地点選択、現在地周辺の確認</li>
+            <li>釣り座候補、気象、潮汐、海況、海水温などの情報表示</li>
+            <li>お気に入り条件、最近使った条件、表示設定の保存と再利用</li>
+            <li>アプリの動作安定化、不具合調査、利用性改善</li>
+        </ul>
+
+        <h2>3. 外部サービスの利用</h2>
+        <p>本アプリは以下の外部サービスまたはデータ提供元を利用する場合があります。</p>
+        <ul>
+            <li>Google Maps SDK for Android</li>
+            <li>Google Play services</li>
+            <li>Cloud Run 経由の海水温取得 API</li>
+            <li>気象、海況、潮汐、海水温などの各種データ提供元</li>
+        </ul>
+        <p>これらのサービスでは、各提供元のプライバシーポリシーに基づいて情報が処理される場合があります。</p>
+
+        <h2>4. 端末内保存について</h2>
+        <p>
+            本アプリは、セッション状態、表示設定、お気に入り条件、最近使った条件などを端末内の保存領域に保持します。
+            これらは主に利便性向上のために使用され、開発者が常時取得するものではありません。
+        </p>
+
+        <h2>5. 位置情報について</h2>
+        <p>
+            位置情報の利用は、端末上でユーザーが権限を許可した場合に限られます。位置情報を許可しない場合でも、
+            一部機能を除き、本アプリは代表海域選択や地図タップによって利用できます。
+        </p>
+
+        <h2>6. 第三者提供</h2>
+        <p>
+            法令に基づく場合を除き、開発者がユーザーの個人情報を第三者へ販売または提供することを目的として
+            収集することはありません。ただし、前記の外部サービス利用に伴い、通信に必要な範囲で情報が送信される場合があります。
+        </p>
+
+        <h2>7. 安全管理</h2>
+        <p>
+            本アプリは、秘密情報のリポジトリ管理除外、release 署名、難読化設定など、公開運用に必要な保護措置を整備しています。
+            ただし、通信環境や外部サービスの性質上、完全な安全性を保証するものではありません。
+        </p>
+
+        <h2>8. 改定</h2>
+        <p>
+            本ポリシーは、機能追加や法令改正に応じて更新されることがあります。重要な変更がある場合は、
+            アプリ内または公開ページ上で案内します。
+        </p>
+
+        <h2>9. お問い合わせ</h2>
+        <div class="contact">
+            <p>本ポリシーに関するお問い合わせ先</p>
+            <p><a href="mailto:tws19820925@gmail.com">tws19820925@gmail.com</a></p>
+        </div>
+    </article>
+</main>
+</body>
+</html>
