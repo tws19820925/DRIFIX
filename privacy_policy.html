@@ -3,15 +3,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>DRIFIX Privacy Policy</title>
+    <title>DRIFIX プライバシーポリシー</title>
     <style>
         :root {
-            --bg: #f4f7fb;
-            --surface: #ffffff;
-            --text: #1f2937;
-            --muted: #5f6b7a;
+            color-scheme: light;
+            --bg: #eef4f8;
+            --card: #ffffff;
+            --text: #18324a;
+            --muted: #526579;
+            --line: #d6e1ea;
             --accent: #0f766e;
-            --border: #d6dce5;
         }
 
         * {
@@ -20,159 +21,148 @@
 
         body {
             margin: 0;
-            font-family: "Segoe UI", "Hiragino Sans", "Yu Gothic UI", sans-serif;
+            font-family: "Hiragino Sans", "Yu Gothic UI", "Yu Gothic", sans-serif;
+            background: linear-gradient(180deg, #dcecf5 0%, var(--bg) 100%);
             color: var(--text);
-            background: linear-gradient(180deg, #eef8f6 0%, var(--bg) 100%);
-            line-height: 1.7;
+            line-height: 1.75;
         }
 
         main {
-            max-width: 900px;
+            max-width: 880px;
             margin: 0 auto;
-            padding: 40px 20px 64px;
+            padding: 32px 18px 56px;
         }
 
-        article {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 28px 24px;
-            box-shadow: 0 12px 32px rgba(15, 23, 42, 0.06);
+        section {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 20px 22px;
+            margin-top: 16px;
+            box-shadow: 0 6px 18px rgba(20, 41, 61, 0.06);
         }
 
         h1, h2 {
-            line-height: 1.3;
+            margin: 0 0 12px;
+            line-height: 1.4;
         }
 
         h1 {
-            margin: 0 0 12px;
-            font-size: 2rem;
+            font-size: 28px;
         }
 
         h2 {
-            margin-top: 32px;
-            font-size: 1.15rem;
-            color: var(--accent);
+            font-size: 20px;
         }
 
         p, li {
-            color: var(--muted);
+            font-size: 15px;
         }
 
         ul {
             padding-left: 20px;
+            margin: 8px 0;
+        }
+
+        .lead {
+            color: var(--muted);
+            margin-top: 10px;
         }
 
         .meta {
-            margin: 0 0 20px;
-            font-size: 0.95rem;
-        }
-
-        .contact {
-            background: #f8fafc;
-            border: 1px solid var(--border);
-            border-radius: 14px;
-            padding: 16px 18px;
+            color: var(--muted);
+            font-size: 14px;
         }
 
         a {
             color: var(--accent);
         }
+
+        code {
+            background: #f4f7fa;
+            border-radius: 6px;
+            padding: 2px 6px;
+            font-family: Consolas, monospace;
+        }
     </style>
 </head>
 <body>
 <main>
-    <article>
-        <h1>プライバシーポリシー</h1>
-        <p class="meta">アプリ名: DRIFIX / FishingSeatAdvisor<br>最終更新日: 2026年4月2日</p>
+    <section>
+        <h1>DRIFIX プライバシーポリシー</h1>
+        <p class="lead">
+            DRIFIX（以下「本アプリ」）は、船釣り向けの海況確認・釣り座提案機能を提供するために必要な範囲で情報を取り扱います。
+            本ポリシーでは、取得する情報、利用目的、第三者サービスの利用について説明します。
+        </p>
+        <p class="meta">最終更新日: 2026年4月3日</p>
+    </section>
 
-        <p>
-            DRIFIX（以下、「本アプリ」）は、釣り座検討や海況確認を支援するため、
-            位置情報、端末内保存データ、外部 API 通信を利用します。本ポリシーは、本アプリにおける
-            情報の取扱いを説明するものです。
-        </p>
-        <p>
-            本アプリは Google Maps の地図サービスや、JAXA G-Portal の GCOM-C SST、Open-Meteo などの
-            外部データを利用しています。本アプリはサブスクリプションサービスではないため、利用集中、
-            提供元サービスの制約、通信障害、運用上の判断その他の事情により、予告なく機能提供の停止、
-            一時制限、または代替サービスへの切替えを行う場合があります。
-        </p>
-        <p>
-            また、本アプリは釣果、釣行計画の妥当性、航行安全、海辺での安全その他の結果を保証するものではありません。
-            現地判断、安全確認、法令順守および各種注意義務は利用者ご自身の責任で行ってください。
-        </p>
-
-        <h2>1. 取得または利用する情報</h2>
+    <section>
+        <h2>1. 取得する情報</h2>
         <ul>
-            <li>位置情報: 現在地表示、地図表示、地点選択補助のために利用します。</li>
-            <li>ユーザー入力または選択情報: 代表海域、魚種、釣法、日時、地図上で選択した座標などを扱います。</li>
-            <li>端末内保存情報: 最近使った条件、お気に入り条件、表示設定、直前のセッション状態を端末内に保存します。</li>
-            <li>通信情報: 海況、天気、波、潮位、海水温などの取得のため、外部サービスに必要なリクエストを送信します。</li>
+            <li>地図上で選択した地点、または現在地機能で選択された位置情報</li>
+            <li>選択した魚種、釣法、日時、座席候補などのアプリ利用条件</li>
+            <li>端末種別、OS、アプリのバージョンなどの技術情報</li>
+            <li>クラッシュやエラー発生時の診断情報</li>
         </ul>
+    </section>
 
+    <section>
         <h2>2. 利用目的</h2>
         <ul>
-            <li>地図表示、地点選択、現在地周辺の確認</li>
-            <li>釣り座候補、気象、潮汐、海況、海水温などの情報表示</li>
-            <li>お気に入り条件、最近使った条件、表示設定の保存と再利用</li>
-            <li>アプリの動作安定化、不具合調査、利用性改善</li>
+            <li>海況、潮流、風、海水温などの情報を取得して表示するため</li>
+            <li>選択した地点や条件に応じて釣り座候補を提案するため</li>
+            <li>お気に入りや直近条件など、アプリの利便性を高めるため</li>
+            <li>不具合の調査、品質改善、動作安定化のため</li>
         </ul>
+    </section>
 
-        <h2>3. 外部サービスの利用</h2>
-        <p>本アプリは以下の外部サービスまたはデータ提供元を利用する場合があります。</p>
+    <section>
+        <h2>3. Firebase の利用</h2>
+        <p>本アプリでは Google Firebase を利用する場合があります。現在利用している主な機能は以下のとおりです。</p>
         <ul>
-            <li>Google Maps SDK for Android</li>
-            <li>Google Play services</li>
-            <li>Cloud Run 経由の海水温取得 API</li>
-            <li>Open-Meteo</li>
-            <li>JAXA G-Portal / GCOM-C SST</li>
-            <li>気象、海況、潮汐、海水温などの各種データ提供元</li>
+            <li><strong>Firebase Analytics</strong>: 利用状況の集計や改善判断のための分析</li>
+            <li><strong>Firebase Crashlytics</strong>: クラッシュや非致命的エラーの収集、原因調査</li>
         </ul>
-        <p>これらのサービスでは、各提供元のプライバシーポリシーに基づいて情報が処理される場合があります。</p>
-
-        <h2>4. データ提供元クレジット</h2>
         <p>
-            本アプリは、外部データ提供元の利用条件に従い、必要なクレジット表記を行います。現時点では、
-            Google Maps 関連サービス、Open-Meteo、JAXA G-Portal / GCOM-C SST などを利用しています。
-            今後、利用データソースの変更や追加があった場合は、アプリ内表示または公開情報を更新します。
+            Crashlytics では、障害解析のために <code>現在のタブ</code>、<code>選択中の地点名</code>、<code>魚種</code>、<code>釣法</code>、
+            <code>日時</code>、<code>アプリ版</code> などの文脈情報を custom key として記録することがあります。
+            また、海況取得や位置取得の失敗時には、解析に必要な範囲で座標、日時、取得プロバイダなどの補足情報を記録する場合があります。
         </p>
+        <p>これらの情報は、広告目的ではなく、不具合調査と品質改善を主目的として利用します。</p>
+    </section>
 
-        <h2>5. 端末内保存について</h2>
+    <section>
+        <h2>4. 位置情報の取り扱い</h2>
         <p>
-            本アプリは、セッション状態、表示設定、お気に入り条件、最近使った条件などを端末内の保存領域に保持します。
-            これらは主に利便性向上のために使用され、開発者が常時取得するものではありません。
+            位置情報は、地図上の地点選択、現在地表示、海況取得、釣り座提案のために使用します。
+            位置情報の利用には、端末側の位置情報許可が必要です。許可しない場合でも、本アプリの一部機能は利用できますが、
+            現在地を用いる機能は制限されます。
         </p>
+    </section>
 
-        <h2>6. 位置情報について</h2>
-        <p>
-            位置情報の利用は、端末上でユーザーが権限を許可した場合に限られます。位置情報を許可しない場合でも、
-            一部機能を除き、本アプリは代表海域選択や地図タップによって利用できます。
-        </p>
+    <section>
+        <h2>5. 第三者サービス</h2>
+        <p>本アプリは、機能提供や分析のために以下の外部サービスを利用することがあります。</p>
+        <ul>
+            <li>Google Maps Platform</li>
+            <li>Google Firebase</li>
+            <li>Open-Meteo</li>
+            <li>気象庁公開データ</li>
+            <li>JAXA G-Portal / GCOM-C SST などの公開データ</li>
+        </ul>
+        <p>各サービスの取り扱いについては、それぞれの提供元ポリシーもあわせてご確認ください。</p>
+    </section>
 
-        <h2>7. 第三者提供</h2>
-        <p>
-            法令に基づく場合を除き、開発者がユーザーの個人情報を第三者へ販売または提供することを目的として
-            収集することはありません。ただし、前記の外部サービス利用に伴い、通信に必要な範囲で情報が送信される場合があります。
-        </p>
+    <section>
+        <h2>6. 保存される情報</h2>
+        <p>お気に入り条件、最近使用した条件、表示設定などは端末内に保存されることがあります。これらはアプリの利便性向上のために利用されます。</p>
+    </section>
 
-        <h2>8. 安全管理</h2>
-        <p>
-            本アプリは、秘密情報のリポジトリ管理除外、release 署名、難読化設定など、公開運用に必要な保護措置を整備しています。
-            ただし、通信環境や外部サービスの性質上、完全な安全性を保証するものではありません。
-        </p>
-
-        <h2>9. 改定</h2>
-        <p>
-            本ポリシーは、機能追加や法令改正に応じて更新されることがあります。重要な変更がある場合は、
-            アプリ内または公開ページ上で案内します。
-        </p>
-
-        <h2>10. お問い合わせ</h2>
-        <div class="contact">
-            <p>本ポリシーに関するお問い合わせ先</p>
-            <p><a href="mailto:tws19820925@gmail.com">tws19820925@gmail.com</a></p>
-        </div>
-    </article>
+    <section>
+        <h2>7. お問い合わせ</h2>
+        <p>本ポリシーに関するお問い合わせは、アプリ内に記載している案内先または公開している連絡先をご利用ください。</p>
+    </section>
 </main>
 </body>
 </html>
