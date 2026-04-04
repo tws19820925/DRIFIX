@@ -15,9 +15,7 @@
             --accent: #0f766e;
         }
 
-        * {
-            box-sizing: border-box;
-        }
+        * { box-sizing: border-box; }
 
         body {
             margin: 0;
@@ -42,42 +40,14 @@
             box-shadow: 0 6px 18px rgba(20, 41, 61, 0.06);
         }
 
-        h1, h2 {
-            margin: 0 0 12px;
-            line-height: 1.4;
-        }
-
-        h1 {
-            font-size: 28px;
-        }
-
-        h2 {
-            font-size: 20px;
-        }
-
-        p, li {
-            font-size: 15px;
-        }
-
-        ul {
-            padding-left: 20px;
-            margin: 8px 0;
-        }
-
-        .lead {
-            color: var(--muted);
-            margin-top: 10px;
-        }
-
-        .meta {
-            color: var(--muted);
-            font-size: 14px;
-        }
-
-        a {
-            color: var(--accent);
-        }
-
+        h1, h2 { margin: 0 0 12px; line-height: 1.4; }
+        h1 { font-size: 28px; }
+        h2 { font-size: 20px; }
+        p, li { font-size: 15px; }
+        ul { padding-left: 20px; margin: 8px 0; }
+        .lead { color: var(--muted); margin-top: 10px; }
+        .meta { color: var(--muted); font-size: 14px; }
+        a { color: var(--accent); }
         code {
             background: #f4f7fa;
             border-radius: 6px;
@@ -91,8 +61,8 @@
     <section>
         <h1>DRIFIX プライバシーポリシー</h1>
         <p class="lead">
-            DRIFIX（以下「本アプリ」）は、海況確認、釣り座提案、釣行計画支援を目的としたアプリです。
-            本ポリシーでは、本アプリにおける情報の取得、利用、第三者サービスの利用、保護方針について説明します。
+            DRIFIX は、船釣り向けの海況確認、釣り座提案、時合確認を支援するアプリです。
+            本ポリシーでは、アプリにおける情報の取得、利用、第三者サービスの利用、連絡先について説明します。
         </p>
         <p class="meta">最終更新日: 2026年4月4日</p>
     </section>
@@ -101,19 +71,19 @@
         <h2>1. 取得する情報</h2>
         <ul>
             <li>位置情報: おおよその現在地、正確な現在地</li>
-            <li>アプリの操作情報: 地点選択、魚種・釣法選択、お気に入り登録、釣り座確認操作など</li>
-            <li>診断情報: クラッシュログ、診断情報、アプリの状態に関する技術情報</li>
-            <li>端末またはその他の ID: Firebase などの SDK が取り扱う識別子</li>
+            <li>アプリの操作情報: 画面遷移、魚種・釣法選択、保存操作など</li>
+            <li>診断情報: クラッシュログ、診断情報、アプリ状態</li>
+            <li>端末またはその他の ID: Firebase などの SDK が扱う識別子</li>
         </ul>
     </section>
 
     <section>
         <h2>2. 情報の利用目的</h2>
         <ul>
-            <li>海況、潮流、海水温、地図表示など本アプリの機能提供</li>
+            <li>海況、潮流、波、海水温、風向など本アプリの機能提供</li>
             <li>地点ごとの釣り座提案や表示内容の最適化</li>
-            <li>障害解析、安定性向上、品質改善</li>
-            <li>利用傾向の把握による機能改善</li>
+            <li>障害解析、品質改善、将来の機能改善</li>
+            <li>利用傾向の確認と操作導線の改善</li>
         </ul>
     </section>
 
@@ -123,31 +93,31 @@
             本アプリは、現在地表示や海況取得のために位置情報を利用します。位置情報の利用は、ユーザーの許可に基づいて行います。
         </p>
         <p>
-            また、選択地点や現在地に対応した海況を取得するため、位置情報を含む必要な情報を外部の海況 API や関連サービスへ送信する場合があります。
-            そのため、Google Play のデータ セーフティ申告上は、位置情報について「収集」と「共有」の両方を申告しています。
+            また、取得した位置情報に応じて海況を取得するため、位置情報を海況 API や関連サービスへ送信する場合があります。
+            そのため、Google Play のデータ セーフティ申告上は、位置情報について「収集」および「共有」に該当する形で申告しています。
         </p>
     </section>
 
     <section>
         <h2>4. Firebase の利用</h2>
-        <p>本アプリでは、Google Firebase を利用しています。主な用途は以下のとおりです。</p>
+        <p>本アプリでは、主に以下の目的で Google Firebase を利用します。</p>
         <ul>
             <li><strong>Firebase Analytics</strong>: 操作イベントや利用傾向の把握</li>
             <li><strong>Firebase Crashlytics</strong>: クラッシュや不具合の解析</li>
         </ul>
         <p>
-            Analytics では、地図タップ、魚種選択、釣法選択、お気に入り登録、釣り座確認などの操作イベントを計測する場合があります。
-            ただし、個人を直接特定することを目的とした利用は行いません。
+            Analytics では、個人を特定しない形で操作イベントや利用傾向を記録する場合があります。
+            たとえば、地図タップ、魚種選択、釣法選択、保存操作などのイベントを確認します。
         </p>
         <p>
-            Crashlytics では、不具合解析のために、現在のタブ、選択中の地点、魚種、釣法、日時、アプリ版などの文脈情報を
-            <code>custom key</code> として記録する場合があります。これらは障害調査や品質改善を目的として利用します。
+            Crashlytics では、障害解析のため、現在のタブ、地点、魚種、釣法、日時、アプリ状態などの文脈情報を
+            <code>custom key</code> として記録する場合があります。
         </p>
     </section>
 
     <section>
         <h2>5. 第三者サービス</h2>
-        <p>本アプリは、以下の第三者サービスまたは API を利用することがあります。</p>
+        <p>本アプリは、次の第三者サービスまたは API を利用することがあります。</p>
         <ul>
             <li>Google Maps Platform</li>
             <li>Google Firebase</li>
@@ -156,32 +126,31 @@
             <li>JAXA G-Portal / GCOM-C SST などの公開データ</li>
         </ul>
         <p>
-            各サービスの取り扱いについては、それぞれの提供元ポリシーもあわせてご確認ください。
+            各サービスの仕様変更に伴っては、それぞれの公開ポリシーもあわせてご確認ください。
         </p>
     </section>
 
     <section>
         <h2>6. データの削除について</h2>
         <p>
-            現時点では、ユーザーが自分のデータ削除をアプリ内から直接リクエストできる専用機能は提供していません。
-            Google Play のデータ セーフティ申告でも、その旨を申告しています。
+            現時点では、ユーザーごとの個別データ削除をアプリから直接リクエストする専用機能は提供していません。
+            Google Play のデータ セーフティ申告でも、その前提で回答しています。
         </p>
     </section>
 
     <section>
         <h2>7. 安全管理</h2>
         <p>
-            本アプリでは、取得したデータの送信時に暗号化通信を利用します。これにより、Google Play のデータ セーフティ申告において
-            「データは送信中に暗号化される」と申告しています。
+            本アプリでは、通信中のデータ保護に暗号化を利用します。これにより、Google Play のデータ セーフティ申告において
+            「データは安全に転送されます」と申告しています。
         </p>
     </section>
 
     <section>
         <h2>8. お問い合わせ</h2>
+        <p>本ポリシーに関するお問い合わせ先は次のとおりです。</p>
         <p>
-            本ポリシーに関するご質問は、以下の連絡先までご連絡ください。
-        </p>
-        <p>
+            Arcadia_Labs<br>
             <a href="mailto:drifix.fishingseatadvisor@gmail.com">drifix.fishingseatadvisor@gmail.com</a>
         </p>
     </section>
