@@ -36,5 +36,8 @@ XとYouTubeは外部リンクとして掲載しています。差し替える場
 - `assets/screenshots/04-seat-recommendation.webp`
 - `assets/screenshots/05-seat-analysis.webp`
 - `assets/screenshots/06-hourly-timeline.webp`
+- `assets/screenshots/07-calendar-overview.webp`
+- `assets/screenshots/08-calendar-score-breakdown.webp`
+- `assets/screenshots/09-seat-comparison-mode.webp`
 
 外部フォント、外部JS、アクセス解析タグは追加していません。Microsoft Forms、X、YouTubeは外部リンクのみで、ページ内への埋め込みはしていません。
