@@ -218,6 +218,7 @@
         .feature-card,
         .screen-card,
         .usecase-card,
+        .calendar-flow,
         .trust-panel,
         .social-panel,
         .policy-block {
@@ -546,6 +547,52 @@
             gap: 10px;
         }
 
+        .calendar-flow {
+            display: grid;
+            gap: 24px;
+            align-items: start;
+        }
+
+        .calendar-copy {
+            display: grid;
+            gap: 14px;
+        }
+
+        .calendar-copy p {
+            color: var(--muted);
+        }
+
+        .calendar-points {
+            display: grid;
+            gap: 10px;
+            margin-top: 4px;
+        }
+
+        .calendar-point {
+            padding: 14px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: #ffffff;
+        }
+
+        .calendar-point strong {
+            display: block;
+            color: var(--navy);
+            font-size: 15px;
+        }
+
+        .calendar-point span {
+            display: block;
+            margin-top: 5px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .calendar-shots {
+            display: grid;
+            gap: 18px;
+        }
+
         .visual-band {
             display: grid;
             gap: 22px;
@@ -689,6 +736,14 @@
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
 
+            .calendar-flow {
+                grid-template-columns: 0.88fr 1.12fr;
+            }
+
+            .calendar-shots {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
             .visual-band {
                 grid-template-columns: 1fr 1fr;
             }
@@ -785,6 +840,7 @@
         </a>
         <nav class="site-nav" aria-label="ページ内ナビゲーション">
             <a href="#features">特徴</a>
+            <a href="#calendar">カレンダー</a>
             <a href="#screenshots">画面紹介</a>
             <a href="#usecases">使い方</a>
             <a href="#closed-test">テスト参加</a>
@@ -803,9 +859,11 @@
                 <p class="hero-lead">
                     DRIFIXは、風・潮・波・月齢・魚種・釣法をもとに、船釣りの座席選びをサポートするアプリです。
                     カレンダーで狙いやすい日を確認し、そのまま釣り座候補まで進めるので、釣行前の計画と当日の判断を画面ごとにわかりやすく整理できます。
+                    当日の詳細では海況をまとめて確認し、比較モードでは候補席を横並びで見比べられます。
                 </p>
                 <div class="hero-actions">
                     <a class="button primary" href="#features">主な機能を見る</a>
+                    <a class="button secondary" href="#calendar">カレンダーを見る</a>
                     <a class="button secondary" href="#screenshots">画面を見る</a>
                     <a class="button secondary" href="#closed-test">クローズドテスト参加</a>
                     <a class="button secondary" href="#privacy">プライバシーポリシー</a>
@@ -864,6 +922,59 @@
         </div>
     </section>
 
+    <section class="section" id="calendar" aria-labelledby="calendar-title">
+        <div class="wrap calendar-flow">
+            <div class="calendar-copy">
+                <p class="section-kicker">Calendar Mode</p>
+                <h2 id="calendar-title">カレンダーで日を選び、評価内訳まで掘り下げる。</h2>
+                <p>
+                    今日から先の日程をカードで並べ、期待度、スコア、データ信頼度を見ながら釣行日の候補を探せます。
+                    気になる日をタップすると、波・風・天気・潮・時合・月齢・データ信頼度の評価内訳を確認し、その日程で魚種や時間帯の設定へ進めます。
+                </p>
+                <div class="calendar-points">
+                    <div class="calendar-point">
+                        <strong>日ごとの見立てを一覧化</strong>
+                        <span>期待大、普通、いまひとつ、判定難をカードで表示し、スコアと天候アイコンも一緒に確認できます。</span>
+                    </div>
+                    <div class="calendar-point">
+                        <strong>カードタップで根拠を確認</strong>
+                        <span>なぜその日が良さそうなのかを、評価項目ごとの点数と説明で見られます。</span>
+                    </div>
+                    <div class="calendar-point">
+                        <strong>そのまま当日の詳細と釣り座へ</strong>
+                        <span>選んだ日付を起点に、当日の海況確認、釣り座レコメンド、比較モードまでつながります。</span>
+                    </div>
+                </div>
+            </div>
+            <div class="calendar-shots" aria-label="カレンダー画面と評価内訳画面">
+                <article class="screen-card">
+                    <div class="phone-frame">
+                        <picture>
+                            <source srcset="assets/screenshots/07-calendar-overview.webp" type="image/webp">
+                            <img src="assets/screenshots/07-calendar-overview.jpg" width="760" height="1689" loading="lazy" alt="日ごとの期待度とスコアをカードで表示するDRIFIXのカレンダー画面">
+                        </picture>
+                    </div>
+                    <div class="screen-caption">
+                        <h3>カレンダー一覧</h3>
+                        <p>今日から先の日程を並べ、期待度、スコア、データ信頼度を比較しながら候補日を選べます。</p>
+                    </div>
+                </article>
+                <article class="screen-card">
+                    <div class="phone-frame">
+                        <picture>
+                            <source srcset="assets/screenshots/08-calendar-score-breakdown.webp" type="image/webp">
+                            <img src="assets/screenshots/08-calendar-score-breakdown.jpg" width="760" height="1689" loading="lazy" alt="カレンダーカードをタップして評価内訳を表示するDRIFIX画面">
+                        </picture>
+                    </div>
+                    <div class="screen-caption">
+                        <h3>カードの評価内訳</h3>
+                        <p>波、風、天気、潮、時合、月齢、データ信頼度の点数を確認してから日程を決められます。</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
     <section class="section" id="steps" aria-labelledby="steps-title">
         <div class="wrap">
             <div class="section-heading">
@@ -891,7 +1002,7 @@
                     <div class="step-copy">
                         <p class="step-label">Step 2</p>
                         <h3>条件を入れる</h3>
-                        <p>魚種、釣法、日付、時間帯を設定。釣り方に合わせた条件で海況を整理します。</p>
+                        <p>魚種、釣法、日付、時間帯を設定。カレンダーで候補日を見てから、釣り方に合わせた条件で海況を整理します。</p>
                     </div>
                 </article>
                 <article class="step-card">
@@ -902,7 +1013,7 @@
                     <div class="step-copy">
                         <p class="step-label">Step 3</p>
                         <h3>釣り座と理由を見る</h3>
-                        <p>推奨席、時間帯別の傾向、席ごとの比較、注意情報を確認。納得感のある席選びをサポートします。</p>
+                        <p>推奨席、当日の詳細、時間帯別の傾向、席ごとの比較、注意情報を確認。納得感のある席選びをサポートします。</p>
                     </div>
                 </article>
             </div>
@@ -955,11 +1066,21 @@
                             <h3>日を選んで、そのまま釣り座へ</h3>
                         </div>
                     </div>
-                    <p>カレンダーで狙いやすい日を確認し、釣行時間内でどの席が向きやすいかをそのままタイムラインで確認できます。</p>
+                    <p>カレンダーで日ごとの期待度とスコアを確認し、カードをタップして評価内訳を見てから釣り座候補へ進めます。</p>
                 </article>
                 <article class="feature-card">
                     <div class="feature-top">
                         <span class="feature-icon" aria-hidden="true">05</span>
+                        <div>
+                            <p class="feature-label">当日の詳細・比較</p>
+                            <h3>候補席を横並びで比較</h3>
+                        </div>
+                    </div>
+                    <p>当日の海況を確認したうえで、比較モードでは最大4席を選び、総合、左右、前後、風、潮などの評価軸を見比べられます。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-top">
+                        <span class="feature-icon" aria-hidden="true">06</span>
                         <div>
                             <p class="feature-label">理由の補助</p>
                             <h3>理由がわかる席分析</h3>
@@ -969,7 +1090,7 @@
                 </article>
                 <article class="feature-card">
                     <div class="feature-top">
-                        <span class="feature-icon" aria-hidden="true">06</span>
+                        <span class="feature-icon" aria-hidden="true">07</span>
                         <div>
                             <p class="feature-label">記録</p>
                             <h3>条件保存・共有</h3>
@@ -1000,7 +1121,7 @@
             <div class="section-heading">
                 <p class="section-kicker">画面紹介</p>
                 <h2 id="screenshots-title">釣行前の判断を、ひとつの流れで。</h2>
-                <p>地図、条件設定、海況、席の推奨、理由の分析、時間帯の推移まで、実際の画面で確認できます。</p>
+                <p>地図、条件設定、カレンダー、評価内訳、海況、席の推奨、比較モード、時間帯の推移まで、実際の画面で確認できます。</p>
             </div>
             <div class="screenshot-grid">
                 <article class="screen-card">
@@ -1025,6 +1146,30 @@
                     <div class="screen-caption">
                         <h3>条件設定</h3>
                         <p>魚種、釣法、日付、開始・終了時刻をまとめて設定できます。</p>
+                    </div>
+                </article>
+                <article class="screen-card">
+                    <div class="phone-frame">
+                        <picture>
+                            <source srcset="assets/screenshots/07-calendar-overview.webp" type="image/webp">
+                            <img src="assets/screenshots/07-calendar-overview.jpg" width="760" height="1689" loading="lazy" alt="日ごとの期待度とスコアをカレンダーで確認するDRIFIX画面">
+                        </picture>
+                    </div>
+                    <div class="screen-caption">
+                        <h3>カレンダー</h3>
+                        <p>先の日程をカードで並べ、期待度、スコア、データ信頼度から候補日を探せます。</p>
+                    </div>
+                </article>
+                <article class="screen-card">
+                    <div class="phone-frame">
+                        <picture>
+                            <source srcset="assets/screenshots/08-calendar-score-breakdown.webp" type="image/webp">
+                            <img src="assets/screenshots/08-calendar-score-breakdown.jpg" width="760" height="1689" loading="lazy" alt="カレンダーカードの評価内訳を円グラフと項目別点数で確認するDRIFIX画面">
+                        </picture>
+                    </div>
+                    <div class="screen-caption">
+                        <h3>評価内訳</h3>
+                        <p>カレンダーカードをタップして、期待度の根拠を項目別の点数で確認できます。</p>
                     </div>
                 </article>
                 <article class="screen-card">
@@ -1066,6 +1211,18 @@
                 <article class="screen-card">
                     <div class="phone-frame">
                         <picture>
+                            <source srcset="assets/screenshots/09-seat-comparison-mode.webp" type="image/webp">
+                            <img src="assets/screenshots/09-seat-comparison-mode.jpg" width="760" height="1689" loading="lazy" alt="複数の候補席を横並びで比較するDRIFIXの比較モード画面">
+                        </picture>
+                    </div>
+                    <div class="screen-caption">
+                        <h3>比較モード</h3>
+                        <p>船図で候補席を選び、総合、左右、前後、風、潮などを横並びで比べられます。</p>
+                    </div>
+                </article>
+                <article class="screen-card">
+                    <div class="phone-frame">
+                        <picture>
                             <source srcset="assets/screenshots/06-hourly-timeline.webp" type="image/webp">
                             <img src="assets/screenshots/06-hourly-timeline.jpg" width="760" height="1689" loading="lazy" alt="潮汐と釣行時間帯のタイムラインを表示するDRIFIX画面">
                         </picture>
@@ -1089,11 +1246,19 @@
             <div class="usecase-grid">
                 <article class="usecase-card">
                     <h3>釣行日の候補選び</h3>
-                    <p>カレンダーで潮、月齢、時間帯の傾向を見ながら、狙いやすい日を探し、そのまま釣り座候補まで確認する。</p>
+                    <p>カレンダーで期待度やスコアを見ながら候補日を探し、カードの評価内訳で根拠を確認する。</p>
                 </article>
                 <article class="usecase-card">
                     <h3>釣行前日のチェック</h3>
                     <p>明日の風、波、潮、月齢を確認し、魚種と釣法に合わせて候補席を見ておく。</p>
+                </article>
+                <article class="usecase-card">
+                    <h3>当日の詳細確認</h3>
+                    <p>選んだ日付と時間帯の風、波、潮汐、月齢をまとめて確認し、釣り座判断の前提をそろえる。</p>
+                </article>
+                <article class="usecase-card">
+                    <h3>候補席の比較検討</h3>
+                    <p>比較モードで複数席を横並びにし、総合点だけでなく左右、前後、風、潮の差を見て選ぶ。</p>
                 </article>
                 <article class="usecase-card">
                     <h3>出船前の最終確認</h3>
@@ -1101,7 +1266,7 @@
                 </article>
                 <article class="usecase-card">
                     <h3>船上での判断補助</h3>
-                    <p>時間帯ごとの傾向や席の比較を見て、釣り座の特徴を把握する。</p>
+                    <p>時間帯ごとの傾向や比較モードの評価軸を見て、釣り座の特徴を把握する。</p>
                 </article>
                 <article class="usecase-card">
                     <h3>振り返り・共有</h3>
