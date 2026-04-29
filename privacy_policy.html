@@ -219,6 +219,7 @@
         .screen-card,
         .usecase-card,
         .calendar-flow,
+        .promo-video-panel,
         .trust-panel,
         .social-panel,
         .policy-block {
@@ -547,6 +548,54 @@
             gap: 10px;
         }
 
+        .promo-video-panel {
+            display: grid;
+            gap: 22px;
+            align-items: center;
+            padding: 20px;
+            border: 1px solid rgba(15, 118, 110, 0.22);
+            border-radius: 8px;
+            background:
+                linear-gradient(135deg, rgba(217, 243, 238, 0.86), rgba(255, 245, 217, 0.68)),
+                #ffffff;
+            box-shadow: var(--shadow);
+        }
+
+        .promo-video-copy {
+            display: grid;
+            gap: 12px;
+        }
+
+        .promo-video-copy p {
+            color: var(--muted);
+        }
+
+        .video-shell {
+            width: min(100%, 360px);
+            margin: 0 auto;
+            padding: 8px;
+            border-radius: 30px;
+            background: #071a2b;
+            box-shadow: 0 20px 44px rgba(10, 33, 53, 0.26);
+        }
+
+        .video-frame {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 9 / 16;
+            overflow: hidden;
+            border-radius: 23px;
+            background: #041522;
+        }
+
+        .video-frame iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
         .calendar-flow {
             display: grid;
             gap: 24px;
@@ -758,6 +807,15 @@
                 align-items: center;
                 padding: 24px;
             }
+
+            .promo-video-panel {
+                grid-template-columns: minmax(0, 1fr) minmax(240px, 360px);
+                padding: 26px 28px;
+            }
+
+            .video-shell {
+                justify-self: end;
+            }
         }
 
         @media (min-width: 1040px) {
@@ -840,6 +898,7 @@
         </a>
         <nav class="site-nav" aria-label="ページ内ナビゲーション">
             <a href="#features">特徴</a>
+            <a href="#promo-video">動画</a>
             <a href="#calendar">カレンダー</a>
             <a href="#screenshots">画面紹介</a>
             <a href="#usecases">使い方</a>
@@ -863,6 +922,7 @@
                 </p>
                 <div class="hero-actions">
                     <a class="button primary" href="#features">主な機能を見る</a>
+                    <a class="button secondary" href="#promo-video">動画を見る</a>
                     <a class="button secondary" href="#calendar">カレンダーを見る</a>
                     <a class="button secondary" href="#screenshots">画面を見る</a>
                     <a class="button secondary" href="#closed-test">クローズドテスト参加</a>
@@ -880,6 +940,34 @@
                         <img src="assets/screenshots/04-seat-recommendation.jpg" width="760" height="1689" alt="釣り座レコメンド結果を表示するDRIFIXの画面">
                     </picture>
                 </figure>
+            </div>
+        </div>
+    </section>
+
+    <section class="section alt" id="promo-video" aria-labelledby="promo-video-title">
+        <div class="wrap">
+            <div class="promo-video-panel">
+                <div class="promo-video-copy">
+                    <p class="section-kicker">Promotion Video</p>
+                    <h2 id="promo-video-title">DRIFIXの使い方をショート動画で確認できます。</h2>
+                    <p>
+                        カレンダーで釣行日を確認し、当日の詳細や釣り座候補へ進む流れを、プロモーション動画で紹介しています。
+                        動画はYouTubeの埋め込みプレイヤーで再生されます。
+                    </p>
+                    <div>
+                        <a class="button light" href="https://youtube.com/shorts/X-5tuTseCu8?feature=share" target="_blank" rel="noopener noreferrer">YouTubeで開く</a>
+                    </div>
+                </div>
+                <div class="video-shell" aria-label="DRIFIXプロモーション動画">
+                    <div class="video-frame">
+                        <iframe
+                            src="https://www.youtube-nocookie.com/embed/X-5tuTseCu8"
+                            title="DRIFIX プロモーション動画"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1410,6 +1498,8 @@
             <a href="#top">ページ上部へ戻る</a>
             <span aria-hidden="true"> / </span>
             <a href="#closed-test">クローズドテスト参加</a>
+            <span aria-hidden="true"> / </span>
+            <a href="#promo-video">プロモーション動画</a>
             <span aria-hidden="true"> / </span>
             <a href="https://x.com/arcadia_" target="_blank" rel="noopener noreferrer">X</a>
             <span aria-hidden="true"> / </span>
