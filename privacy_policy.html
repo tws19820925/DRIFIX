@@ -219,6 +219,7 @@
         .screen-card,
         .usecase-card,
         .trust-panel,
+        .social-panel,
         .policy-block {
             min-width: 0;
         }
@@ -359,7 +360,8 @@
         .feature-card,
         .usecase-card,
         .policy-block,
-        .trust-panel {
+        .trust-panel,
+        .social-panel {
             border: 1px solid var(--line);
             border-radius: 8px;
             background: var(--card);
@@ -528,6 +530,22 @@
             font-size: 13px;
         }
 
+        .social-panel {
+            display: grid;
+            gap: 18px;
+            padding: 20px;
+        }
+
+        .social-panel p {
+            color: var(--muted);
+        }
+
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
         .visual-band {
             display: grid;
             gap: 22px;
@@ -679,6 +697,12 @@
                 grid-template-columns: minmax(0, 1fr) auto;
                 padding: 24px;
             }
+
+            .social-panel {
+                grid-template-columns: minmax(0, 1fr) auto;
+                align-items: center;
+                padding: 24px;
+            }
         }
 
         @media (min-width: 1040px) {
@@ -764,6 +788,7 @@
             <a href="#screenshots">画面紹介</a>
             <a href="#usecases">使い方</a>
             <a href="#closed-test">テスト参加</a>
+            <a href="#official-links">公式SNS</a>
             <a href="#privacy">プライバシーポリシー</a>
         </nav>
     </div>
@@ -815,6 +840,25 @@
                 <div class="tester-actions">
                     <a class="button primary" href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAANeyxwRUNjdIUkFGRjRKRjExUEVTRERNQktURkc2VS4u" target="_blank" rel="noopener noreferrer">参加フォームを開く</a>
                     <span class="external-note">Microsoft Forms</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section alt" id="official-links" aria-labelledby="official-links-title">
+        <div class="wrap">
+            <div class="social-panel">
+                <div>
+                    <p class="section-kicker">Official Links</p>
+                    <h2 id="official-links-title">最新情報はXとYouTubeでも確認できます。</h2>
+                    <p>
+                        開発状況、クローズドテストのお知らせ、DRIFIX関連の動画や補足情報は公式リンクから確認できます。
+                        いずれも外部サイトで開きます。
+                    </p>
+                </div>
+                <div class="social-links" aria-label="公式SNSリンク">
+                    <a class="button light" href="https://x.com/arcadia_" target="_blank" rel="noopener noreferrer">Xを開く</a>
+                    <a class="button light" href="https://www.youtube.com/@tws1982" target="_blank" rel="noopener noreferrer">YouTubeを開く</a>
                 </div>
             </div>
         </div>
@@ -1201,6 +1245,10 @@
             <a href="#top">ページ上部へ戻る</a>
             <span aria-hidden="true"> / </span>
             <a href="#closed-test">クローズドテスト参加</a>
+            <span aria-hidden="true"> / </span>
+            <a href="https://x.com/arcadia_" target="_blank" rel="noopener noreferrer">X</a>
+            <span aria-hidden="true"> / </span>
+            <a href="https://www.youtube.com/@tws1982" target="_blank" rel="noopener noreferrer">YouTube</a>
             <span aria-hidden="true"> / </span>
             <a href="mailto:drifix.fishingseatadvisor@gmail.com">お問い合わせ</a>
         </p>
