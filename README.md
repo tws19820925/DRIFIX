@@ -41,5 +41,7 @@ XとYouTubeは外部リンクとして掲載しています。差し替える場
 - `assets/screenshots/07-calendar-overview.webp`
 - `assets/screenshots/08-calendar-score-breakdown.webp`
 - `assets/screenshots/09-seat-comparison-mode.webp`
+- `assets/screenshots/step-01-location-selection.webp`
+- `assets/screenshots/step-02-condition-selection.webp`
 
 外部フォント、外部JS、アクセス解析タグは追加していません。Microsoft Forms、X、YouTubeチャンネルは外部リンクのみです。プロモーション動画はYouTubeの埋め込みプレイヤーで掲載しています。
