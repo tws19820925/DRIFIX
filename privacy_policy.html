@@ -220,7 +220,6 @@
         .usecase-card,
         .calendar-flow,
         .promo-video-panel,
-        .tester-panel,
         .trust-panel,
         .social-panel,
         .policy-block {
@@ -311,11 +310,6 @@
 
         .section.alt {
             background: linear-gradient(180deg, rgba(238, 246, 248, 0.6), rgba(217, 243, 238, 0.38));
-        }
-
-        .closed-test-spotlight {
-            padding-top: 44px;
-            background: linear-gradient(180deg, rgba(255, 248, 227, 0.72), rgba(238, 246, 248, 0.6));
         }
 
         .section.dark-band {
@@ -507,74 +501,6 @@
 
         .trust-panel p {
             color: var(--muted);
-        }
-
-        .tester-panel {
-            position: relative;
-            display: grid;
-            gap: 20px;
-            align-items: center;
-            overflow: hidden;
-            padding: 24px;
-            border: 2px solid rgba(245, 200, 106, 0.8);
-            border-radius: 8px;
-            background:
-                linear-gradient(135deg, #ffffff 0%, rgba(255, 245, 217, 0.88) 52%, rgba(217, 243, 238, 0.86) 100%),
-                #ffffff;
-            box-shadow: 0 24px 56px rgba(16, 47, 78, 0.16);
-        }
-
-        .tester-panel::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            left: 0;
-            height: 6px;
-            background: linear-gradient(90deg, var(--gold), var(--coral), var(--accent));
-        }
-
-        .tester-content {
-            display: grid;
-            gap: 10px;
-        }
-
-        .tester-panel h2 {
-            font-size: 30px;
-        }
-
-        .tester-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .tester-badge {
-            display: inline-flex;
-            align-items: center;
-            min-height: 30px;
-            padding: 5px 10px;
-            border-radius: 999px;
-            background: rgba(255, 255, 255, 0.74);
-            color: var(--navy);
-            font-size: 13px;
-            font-weight: 800;
-        }
-
-        .tester-panel p {
-            color: var(--muted);
-        }
-
-        .tester-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            align-items: center;
-        }
-
-        .external-note {
-            color: var(--muted);
-            font-size: 13px;
         }
 
         .social-panel {
@@ -842,20 +768,6 @@
                 grid-template-columns: 1fr 1fr;
             }
 
-            .tester-panel {
-                grid-template-columns: minmax(0, 1fr) auto;
-                padding: 30px 32px;
-            }
-
-            .tester-panel h2 {
-                font-size: 38px;
-            }
-
-            .tester-panel .button.primary {
-                min-height: 52px;
-                padding: 13px 22px;
-            }
-
             .social-panel {
                 grid-template-columns: minmax(0, 1fr) auto;
                 align-items: center;
@@ -951,7 +863,6 @@
             <span>DRIFIX</span>
         </a>
         <nav class="site-nav" aria-label="ページ内ナビゲーション">
-            <a href="#closed-test">テスト参加</a>
             <a href="#features">特徴</a>
             <a href="#promo-video">動画</a>
             <a href="#calendar">カレンダー</a>
@@ -975,8 +886,7 @@
                     当日の詳細では海況をまとめて確認し、比較モードでは候補席を横並びで見比べられます。
                 </p>
                 <div class="hero-actions">
-                    <a class="button primary" href="#closed-test">クローズドテストに参加する</a>
-                    <a class="button secondary" href="#promo-video">動画を見る</a>
+                    <a class="button primary" href="#promo-video">動画を見る</a>
                     <a class="button secondary" href="#calendar">カレンダーを見る</a>
                     <a class="button secondary" href="#features">主な機能を見る</a>
                     <a class="button secondary" href="#screenshots">画面を見る</a>
@@ -994,30 +904,6 @@
                         <img src="assets/screenshots/04-seat-recommendation.jpg" width="760" height="1689" alt="釣り座レコメンド結果を表示するDRIFIXの画面">
                     </picture>
                 </figure>
-            </div>
-        </div>
-    </section>
-
-    <section class="section closed-test-spotlight" id="closed-test" aria-labelledby="closed-test-title">
-        <div class="wrap">
-            <div class="tester-panel">
-                <div class="tester-content">
-                    <p class="section-kicker">Closed Test</p>
-                    <h2 id="closed-test-title">クローズドテスト参加メンバー募集中</h2>
-                    <p>
-                        DRIFIXを実際に試し、使い勝手や表示内容の改善に協力いただける方を募集しています。
-                        参加希望はMicrosoft Formsから送信できます。
-                    </p>
-                    <div class="tester-badges" aria-label="募集状況">
-                        <span class="tester-badge">募集中</span>
-                        <span class="tester-badge">Microsoft Formsで受付</span>
-                        <span class="tester-badge">外部サイトで開きます</span>
-                    </div>
-                </div>
-                <div class="tester-actions">
-                    <a class="button primary" href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAANeyxwRUNjdIUkFGRjRKRjExUEVTRERNQktURkc2VS4u" target="_blank" rel="noopener noreferrer">参加フォームを開く</a>
-                    <span class="external-note">Microsoft Forms</span>
-                </div>
             </div>
         </div>
     </section>
@@ -1057,7 +943,7 @@
                     <p class="section-kicker">Official Links</p>
                     <h2 id="official-links-title">最新情報はXとYouTubeでも確認できます。</h2>
                     <p>
-                        開発状況、クローズドテストのお知らせ、DRIFIX関連の動画や補足情報は公式リンクから確認できます。
+                        開発状況、DRIFIX関連の動画や補足情報は公式リンクから確認できます。
                         いずれも外部サイトで開きます。
                     </p>
                 </div>
@@ -1555,8 +1441,6 @@
         <p>&copy; Arcadia_Labs / DRIFIX</p>
         <p>
             <a href="#top">ページ上部へ戻る</a>
-            <span aria-hidden="true"> / </span>
-            <a href="#closed-test">クローズドテスト参加</a>
             <span aria-hidden="true"> / </span>
             <a href="#promo-video">プロモーション動画</a>
             <span aria-hidden="true"> / </span>
