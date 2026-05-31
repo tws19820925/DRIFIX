@@ -1,12 +1,12 @@
 # DRIFIX web page
 
-DRIFIXの公開ページです。`privacy_policy.html` はGoogle Play等のプライバシーポリシーURLとして残しつつ、アプリ紹介、プロモーション画像、スクリーンショット、プライバシーポリシーを1ページに統合しています。
+DRIFIXの公開ページです。`privacy_policy.html` はGoogle Play等のプライバシーポリシーURLとして残しつつ、アプリ紹介、プロモーション画像、スクリーンショット、YACOSミニゲーム紹介、AIモード開発状況、プライバシーポリシーを1ページに統合しています。
 
 ## Files
 
 - `privacy_policy.html`: 紹介ページ兼プライバシーポリシー本体
 - `index.html`: ルートURLから `privacy_policy.html` へ案内する入口
-- `assets/promo/`: ヒーロー画像、OGP画像、アプリアイコン、船上ビジュアル
+- `assets/promo/`: ヒーロー画像、OGP画像、アプリアイコン、船上ビジュアル、YACOSミニゲームアイコン
 - `assets/screenshots/`: アプリ画面のWeb掲載用スクリーンショット
 
 ## Official Links
@@ -37,6 +37,10 @@ XとYouTubeは外部リンクとして掲載しています。差し替える場
 - `assets/screenshots/07-calendar-overview.webp`
 - `assets/screenshots/08-calendar-score-breakdown.webp`
 - `assets/screenshots/09-seat-comparison-mode.webp`
+- `assets/screenshots/10-mini-game-launchers.webp`
+- `assets/screenshots/11-yacos-mini-fishing.webp`
+- `assets/screenshots/12-yacos-mini-komase-fishing.webp`
+- `assets/screenshots/13-ai-concierge-beta.webp`
 - `assets/screenshots/step-01-location-selection.webp`
 - `assets/screenshots/step-02-condition-selection.webp`
 

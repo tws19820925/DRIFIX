@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DRIFIX | 船釣りの海況確認・釣り座提案アプリ</title>
-    <meta name="description" content="DRIFIXは、風・潮・波・月齢・魚種・釣法をもとに船釣りの釣り座選びをサポートするアプリです。海況確認、時間帯別の傾向、席の比較、条件保存に対応しています。">
+    <meta name="description" content="DRIFIXは、風・潮・波・月齢・魚種・釣法をもとに船釣りの釣り座選びをサポートするアプリです。海況確認、時間帯別の傾向、席の比較、条件保存、YACOSミニゲームに対応しています。">
     <meta property="og:title" content="DRIFIX | 船釣りの海況確認・釣り座提案アプリ">
-    <meta property="og:description" content="海況を読んで、釣り座を選ぶ。DRIFIXは船釣りの計画と判断をサポートします。">
+    <meta property="og:description" content="海況を読んで、釣り座を選ぶ。DRIFIXは船釣りの計画、判断、YACOSミニゲームをサポートします。">
     <meta property="og:type" content="website">
     <meta property="og:image" content="assets/promo/drifix-ogp-1200x630.webp">
     <meta property="og:locale" content="ja_JP">
@@ -216,6 +216,9 @@
         .hero-media,
         .step-card,
         .feature-card,
+        .mini-game-showcase,
+        .mini-game-card,
+        .ai-mode-panel,
         .screen-card,
         .usecase-card,
         .calendar-flow,
@@ -519,6 +522,125 @@
             gap: 10px;
         }
 
+        .mini-game-showcase {
+            display: grid;
+            gap: 20px;
+            align-items: center;
+            margin-bottom: 22px;
+            padding: 20px;
+            border: 1px solid rgba(15, 118, 110, 0.2);
+            border-radius: 8px;
+            background: #ffffff;
+            box-shadow: var(--shadow);
+        }
+
+        .mini-game-showcase-copy,
+        .mini-game-copy,
+        .ai-mode-copy {
+            display: grid;
+            gap: 12px;
+        }
+
+        .mini-game-showcase-copy p,
+        .mini-game-copy p {
+            color: var(--muted);
+        }
+
+        .mini-game-grid {
+            display: grid;
+            gap: 18px;
+        }
+
+        .mini-game-card {
+            display: grid;
+            gap: 18px;
+            align-items: center;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: #ffffff;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            padding: 18px;
+        }
+
+        .mini-game-showcase .phone-frame,
+        .mini-game-card .phone-frame,
+        .ai-mode-panel .phone-frame {
+            margin-top: 0;
+        }
+
+        .mini-title-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .mini-title-row img {
+            width: 52px;
+            height: 52px;
+            flex: 0 0 auto;
+            object-fit: contain;
+        }
+
+        .mini-points {
+            display: grid;
+            gap: 8px;
+            margin-top: 2px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .mini-points li {
+            position: relative;
+            padding-left: 16px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .mini-points li::before {
+            position: absolute;
+            top: 0.72em;
+            left: 0;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent);
+            content: "";
+        }
+
+        .ai-mode-panel {
+            display: grid;
+            gap: 20px;
+            align-items: center;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .ai-mode-copy p {
+            color: rgba(255, 255, 255, 0.78);
+        }
+
+        .ai-status {
+            display: grid;
+            gap: 10px;
+            margin-top: 2px;
+        }
+
+        .ai-status-item {
+            padding-left: 12px;
+            border-left: 4px solid var(--gold);
+            color: rgba(255, 255, 255, 0.78);
+            font-size: 14px;
+        }
+
+        .ai-status-item strong {
+            display: block;
+            color: #ffffff;
+            font-size: 15px;
+        }
+
         .promo-video-panel {
             display: grid;
             gap: 22px;
@@ -764,6 +886,25 @@
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
 
+            .mini-game-showcase {
+                grid-template-columns: minmax(210px, 0.7fr) minmax(0, 1fr);
+                padding: 24px;
+            }
+
+            .mini-game-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .mini-game-card {
+                grid-template-columns: minmax(180px, 0.78fr) minmax(0, 1fr);
+                padding: 22px;
+            }
+
+            .ai-mode-panel {
+                grid-template-columns: minmax(230px, 0.78fr) minmax(0, 1fr);
+                padding: 26px;
+            }
+
             .visual-band {
                 grid-template-columns: 1fr 1fr;
             }
@@ -865,6 +1006,8 @@
         <nav class="site-nav" aria-label="ページ内ナビゲーション">
             <a href="#features">特徴</a>
             <a href="#promo-video">動画</a>
+            <a href="#mini-games">ミニゲーム</a>
+            <a href="#ai-mode">AIモード</a>
             <a href="#calendar">カレンダー</a>
             <a href="#screenshots">画面紹介</a>
             <a href="#usecases">使い方</a>
@@ -884,9 +1027,12 @@
                     DRIFIXは、風・潮・波・月齢・魚種・釣法をもとに、船釣りの座席選びをサポートするアプリです。
                     カレンダーで狙いやすい日を確認し、そのまま釣り座候補まで進めるので、釣行前の計画と当日の判断を画面ごとにわかりやすく整理できます。
                     当日の詳細では海況をまとめて確認し、比較モードでは候補席を横並びで見比べられます。
+                    マップから遊べるYACOSミニ釣りとYACOSミニコマセ釣りも公開中です。
                 </p>
                 <div class="hero-actions">
                     <a class="button primary" href="#promo-video">動画を見る</a>
+                    <a class="button secondary" href="#mini-games">ミニゲーム</a>
+                    <a class="button secondary" href="#ai-mode">AIモード</a>
                     <a class="button secondary" href="#calendar">カレンダーを見る</a>
                     <a class="button secondary" href="#features">主な機能を見る</a>
                     <a class="button secondary" href="#screenshots">画面を見る</a>
@@ -930,6 +1076,139 @@
                             loading="lazy"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="mini-games" aria-labelledby="mini-games-title">
+        <div class="wrap">
+            <div class="section-heading">
+                <p class="section-kicker">YACOS Mini Games</p>
+                <h2 id="mini-games-title">公開中のYACOSミニゲームを追加しました。</h2>
+                <p>
+                    DRIFIX本体のマップ左上から、YACOSの「ミニ釣り」と「ミニコマセ釣り」を起動できます。
+                    釣行計画の合間に、海の中の動きや釣り方の感覚を短時間で楽しめるコンテンツです。
+                </p>
+            </div>
+
+            <div class="mini-game-showcase">
+                <div class="phone-frame">
+                    <picture>
+                        <source srcset="assets/screenshots/10-mini-game-launchers.webp" type="image/webp">
+                        <img src="assets/screenshots/10-mini-game-launchers.jpg" width="760" height="1692" loading="lazy" alt="DRIFIXのマップ左上にYACOSミニ釣りとYACOSミニコマセ釣りの起動ボタンを表示した画面">
+                    </picture>
+                </div>
+                <div class="mini-game-showcase-copy">
+                    <p class="feature-label">マップから起動</p>
+                    <h3>2つのYACOSボタンからすぐに遊べます。</h3>
+                    <p>
+                        釣行計画のTOP画面に、YACOSミニ釣りとYACOSミニコマセ釣りの入口を配置しました。
+                        通常の釣り座計画から離れず、ミニゲームへ自然に移動できます。
+                    </p>
+                    <ul class="mini-points">
+                        <li>YACOSミニ釣りは、仕掛けを投入して魚影を狙うライトな釣りゲームです。</li>
+                        <li>YACOSミニコマセ釣りは、指示棚・コマセ・刺し餌の同調を意識して遊べます。</li>
+                        <li>どちらも公開ページで紹介できる本番導線のあるコンテンツです。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mini-game-grid">
+                <article class="mini-game-card">
+                    <div class="phone-frame">
+                        <picture>
+                            <source srcset="assets/screenshots/11-yacos-mini-fishing.webp" type="image/webp">
+                            <img src="assets/screenshots/11-yacos-mini-fishing.jpg" width="760" height="1692" loading="lazy" alt="YACOSミニ釣りで船と魚影と投入ボタンを表示しているゲーム画面">
+                        </picture>
+                    </div>
+                    <div class="mini-game-copy">
+                        <div class="mini-title-row">
+                            <img src="assets/promo/yacos-mini-fishing-icon.webp" width="192" height="192" loading="lazy" alt="">
+                            <div>
+                                <p class="feature-label">公開中</p>
+                                <h3>YACOSミニ釣り</h3>
+                            </div>
+                        </div>
+                        <p>
+                            YACOS船長と海の中の魚影を見ながら、仕掛けを投入して魚を狙うミニゲームです。
+                            深さや魚の動きを見て、タイミングよく操作する遊びとして掲載します。
+                        </p>
+                        <ul class="mini-points">
+                            <li>マップ画面からすぐに起動できます。</li>
+                            <li>魚影の層を見ながら、投入タイミングを選びます。</li>
+                            <li>釣行計画の合間に遊べる短時間コンテンツです。</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="mini-game-card">
+                    <div class="phone-frame">
+                        <picture>
+                            <source srcset="assets/screenshots/12-yacos-mini-komase-fishing.webp" type="image/webp">
+                            <img src="assets/screenshots/12-yacos-mini-komase-fishing.jpg" width="760" height="1692" loading="lazy" alt="YACOSミニコマセ釣りで指示棚、HIT率、コマセ残量、現在のビシ棚を表示しているゲーム画面">
+                        </picture>
+                    </div>
+                    <div class="mini-game-copy">
+                        <div class="mini-title-row">
+                            <img src="assets/promo/yacos-mini-komase-icon.webp" width="192" height="192" loading="lazy" alt="">
+                            <div>
+                                <p class="feature-label">公開中</p>
+                                <h3>YACOSミニコマセ釣り</h3>
+                            </div>
+                        </div>
+                        <p>
+                            船長からのビシの指示棚に合わせてビシを落とし、シャクリでコマセ雲と刺し餌を同調させるミニゲームです。
+                            HIT率、コマセ残量、現在のビシ棚を見ながら、コマセ釣りらしい判断を楽しめます。
+                        </p>
+                        <ul class="mini-points">
+                            <li>指示棚と危険ラインを見ながら棚を合わせます。</li>
+                            <li>コマセ残量と同調率を確認しながら操作します。</li>
+                            <li>ミニ釣りとは違う、コマセ釣り専用の画面とルールです。</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section dark-band" id="ai-mode" aria-labelledby="ai-mode-title">
+        <div class="wrap">
+            <div class="section-heading">
+                <p class="section-kicker">AI Mode</p>
+                <h2 id="ai-mode-title">AIモードは非公開で内部開発中です。</h2>
+                <p>
+                    AIコンシェルジュβとして、会話から場所・日時・魚種・釣法などを整理し、釣り座提案へつなげる体験を検証しています。
+                    現時点では公開機能ではなく、内部開発・検証中のコンテンツとして紹介します。
+                </p>
+            </div>
+            <div class="ai-mode-panel">
+                <div class="phone-frame">
+                    <picture>
+                        <source srcset="assets/screenshots/13-ai-concierge-beta.webp" type="image/webp">
+                        <img src="assets/screenshots/13-ai-concierge-beta.jpg" width="760" height="1692" loading="lazy" alt="DRIFIXのAIコンシェルジュβでAIモードONと入力欄を表示している開発中画面">
+                    </picture>
+                </div>
+                <div class="ai-mode-copy">
+                    <h3>AIコンシェルジュβ</h3>
+                    <p>
+                        ユーザーの相談内容から釣行条件を読み取り、日時、場所、対象魚、釣法を確認しながら候補を整理するモードです。
+                        公開前のため、仕様や表示内容は検証結果に応じて調整されます。
+                    </p>
+                    <div class="ai-status" aria-label="AIモードの公開状況">
+                        <div class="ai-status-item">
+                            <strong>公開状態</strong>
+                            現在は非公開です。通常の公開版では、開発・検証が完了するまで利用できません。
+                        </div>
+                        <div class="ai-status-item">
+                            <strong>開発内容</strong>
+                            会話から釣行条件を構造化し、既存の海況確認・釣り座提案フローへつなげる体験を検証しています。
+                        </div>
+                        <div class="ai-status-item">
+                            <strong>公開方針</strong>
+                            プライバシー、入力内容の扱い、回答の安全性を確認しながら段階的に準備します。
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1131,6 +1410,26 @@
                     </div>
                     <p>よく使う条件をお気に入り登録。釣行メモとして魚種、釣法、月齢、潮、座標、釣り座を共有できます。</p>
                 </article>
+                <article class="feature-card">
+                    <div class="feature-top">
+                        <span class="feature-icon" aria-hidden="true">08</span>
+                        <div>
+                            <p class="feature-label">YACOSミニゲーム</p>
+                            <h3>ミニ釣りとミニコマセ釣り</h3>
+                        </div>
+                    </div>
+                    <p>マップ画面から、YACOSミニ釣りとYACOSミニコマセ釣りを起動できます。釣行計画の合間に楽しめる公開中コンテンツです。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-top">
+                        <span class="feature-icon" aria-hidden="true">09</span>
+                        <div>
+                            <p class="feature-label">AIモード</p>
+                            <h3>AIコンシェルジュβを開発中</h3>
+                        </div>
+                    </div>
+                    <p>会話から釣行条件を整理するAIモードを非公開で内部開発中です。公開に向けて、プライバシーと安全性を検証しています。</p>
+                </article>
             </div>
         </div>
     </section>
@@ -1154,7 +1453,7 @@
             <div class="section-heading">
                 <p class="section-kicker">画面紹介</p>
                 <h2 id="screenshots-title">釣行前の判断を、ひとつの流れで。</h2>
-                <p>地図、条件設定、カレンダー、評価内訳、海況、席の推奨、比較モード、時間帯の推移まで、実際の画面で確認できます。</p>
+                <p>地図、条件設定、カレンダー、評価内訳、海況、席の推奨、比較モード、ミニゲーム、開発中のAIモードまで、実際の画面で確認できます。</p>
             </div>
             <div class="screenshot-grid">
                 <article class="screen-card">
@@ -1167,6 +1466,42 @@
                     <div class="screen-caption">
                         <h3>釣行計画マップ</h3>
                         <p>地図タップ地点や現在地から、釣行エリアの条件を見始められます。</p>
+                    </div>
+                </article>
+                <article class="screen-card">
+                    <div class="phone-frame">
+                        <picture>
+                            <source srcset="assets/screenshots/11-yacos-mini-fishing.webp" type="image/webp">
+                            <img src="assets/screenshots/11-yacos-mini-fishing.jpg" width="760" height="1692" loading="lazy" alt="YACOSミニ釣りのゲーム画面">
+                        </picture>
+                    </div>
+                    <div class="screen-caption">
+                        <h3>YACOSミニ釣り</h3>
+                        <p>仕掛けを投入して魚影を狙う、公開中のライトなミニゲームです。</p>
+                    </div>
+                </article>
+                <article class="screen-card">
+                    <div class="phone-frame">
+                        <picture>
+                            <source srcset="assets/screenshots/12-yacos-mini-komase-fishing.webp" type="image/webp">
+                            <img src="assets/screenshots/12-yacos-mini-komase-fishing.jpg" width="760" height="1692" loading="lazy" alt="YACOSミニコマセ釣りのゲーム画面">
+                        </picture>
+                    </div>
+                    <div class="screen-caption">
+                        <h3>YACOSミニコマセ釣り</h3>
+                        <p>指示棚、コマセ残量、同調率を見ながら遊ぶ公開中のミニゲームです。</p>
+                    </div>
+                </article>
+                <article class="screen-card">
+                    <div class="phone-frame">
+                        <picture>
+                            <source srcset="assets/screenshots/13-ai-concierge-beta.webp" type="image/webp">
+                            <img src="assets/screenshots/13-ai-concierge-beta.jpg" width="760" height="1692" loading="lazy" alt="開発中のAIコンシェルジュβ画面">
+                        </picture>
+                    </div>
+                    <div class="screen-caption">
+                        <h3>AIコンシェルジュβ</h3>
+                        <p>会話から釣行条件を整理するAIモードを、非公開で内部開発中です。</p>
                     </div>
                 </article>
                 <article class="screen-card">
